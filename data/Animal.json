@@ -1,0 +1,84 @@
+[
+    {
+        "id": 0,
+        "name": "husky",
+        "image": "https://scontent.fhan7-1.fna.fbcdn.net/v/t1.6435-9/45882969_2141078852808437_4471822281038888960_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=sdJFzbmGpBMAX_j2Nsi&_nc_oc=AQn6Aonc3N3bBEh4_hXdIEpmuJzkdz3MSHz1gN8tabSmIIq83fvwsF66E2wjiLGblDc&_nc_ht=scontent.fhan7-1.fna&oh=00_AT_cUasoij340u_uPPMJNNF_icRWLjjOAOEz06rq6YC8OQ&oe=6376DE2C",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 1,
+        "name": "Bull Pháp",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELLBXW-t5N-AAPddVQi7Lbp_JQ8c5dBDOow&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 2,
+        "name": "bull terrier",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjXAF1VO3H7ldFXwOrQ0G6UIdJD0S1twLWhA&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 3,
+        "name": "PUG",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiGl2TfZLanhOAE66ONxL_MTRIp5mk6QtSA&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 4,
+        "name": "Mèo Anh lông ngắn",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTye5CjmaE-kG_1tbf5k0TsjsqTeR3b6NYNQQ&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 5,
+        "name": "Mèo Ba tư",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO40h7Zu94TfK-G2eBLGAJ3yohQLtpJiTk2w&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 6,
+        "name": "Mèo Ai Cập Sphynx",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5He7YdjESktKhrfhxag2QKN91gXbdIceWQ&usqp=CAU",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 7,
+        "name": "chó",
+        "image": "https://img.freepik.com/free-vector/cute-dog-sticking-her-tongue-out-cartoon-icon-illustration_138676-2709.jpg?w=2000",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    },
+    {
+        "id": 8,
+        "name": "chó",
+        "image": "https://img.freepik.com/free-vector/cute-dog-sticking-her-tongue-out-cartoon-icon-illustration_138676-2709.jpg?w=2000",
+        "status":"Sold Out",
+        "price": 40000,
+        "location": "235 Hoàng Quốc Việt",
+        "description": "ăn nhiều"
+    }
+   
+]
