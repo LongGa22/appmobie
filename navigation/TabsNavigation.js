@@ -2,8 +2,8 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { FontAwesome } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
-import HomeScreen from "../screen/HomeScreen";
-import CartScreen from '../screen/CartScreen'
+import HomeScreen from "../screens/HomeScreen";
+import CartScreen from "../screens/CartScreen"
 
 const Tab = createBottomTabNavigator();
 
@@ -21,7 +21,7 @@ const TabNavigator= () =>{
             )
         }}/>
         <Tab.Screen name="Cart" component={CartScreen} options={{
-            tabBarBadge:3,
+            // tabBarBadge:3,
             tabBarIcon:({color,size}) =>(
                 <Feather name="shopping-cart" size={size} color={color} />
             )

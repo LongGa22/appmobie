@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Image, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, Image, TouchableOpacity, ScrollView,StyleSheet } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { Picker } from "@react-native-picker/picker";
 
@@ -11,36 +11,32 @@ export default function AnimalDetail({ navigation, route }) {
   const [amount, setAmount] = useState(1);
 
   
-//   const addToCart = async () => {
-//     let cartData = await AsyncStorage.getItem("cartData");
-//     if (cartData) {
-//       cartData = JSON.parse(cartData);
-//       cartData.push({
-//         id: item.id,
-//         name: item.name,
-//         image: item.image,
-//         price: item.price,
-//         amount: amount,
-//         size: size,
-//         ice: ice,
-//         owner: item.owner,
-//       });
-//     } else {
-//       cartData = [];
-//       cartData.push({
-//         id: item.id,
-//         name: item.name,
-//         image: item.image,
-//         price: item.price,
-//         amount: amount,
-//         size: size,
-//         ice: ice,
-//         owner: item.owner,
-//       });
-//     }
-//     AsyncStorage.setItem("cartData", JSON.stringify(cartData));
-//     navigation.navigate("CartScreen");
-//   };
+  const addToCart = async () => {
+    let cartData = await AsyncStorage.getItem("cartData");
+    if (cartData) {
+      cartData = JSON.parse(cartData);
+      cartData.push({
+        id: item.id,
+        name: item.name,
+        image: item.image,
+        price: item.price,
+        amount: amount,
+        owner: item.owner,
+      });
+    } else {
+      cartData = [];
+      cartData.push({
+        id: item.id,
+        name: item.name,
+        image: item.image,
+        price: item.price,
+        amount: amount,
+        owner: item.owner,
+      });
+    }
+    AsyncStorage.setItem("cartData", JSON.stringify(cartData));
+    navigation.navigate("CartScreen");
+  };
   return (
     <ScrollView style={{ backgroundColor: "#fff", flex: 1 }}>
       <View style={{ position: "relative" }}>
@@ -226,7 +222,26 @@ export default function AnimalDetail({ navigation, route }) {
           style={{ marginTop: 30 }}
           title={"THÊM VÀO GIỎ"}
         /> */}
+          <TouchableOpacity 
+          style={styles.css_button}
+            onPress={addToCart}>
+              <Text style={{fontWeight:'bold'}} >THÊM VÀO GIỎ</Text>
+            </TouchableOpacity>
       </View>
     </ScrollView>
   );
 }
+
+const styles = StyleSheet.create({
+  css_button:{
+    height:50,
+        width:250,
+        backgroundColor:'white',
+        alignItems:'center',
+        justifyContent:'center',
+        borderRadius:10,
+        marginBottom:30,
+        alignSelf:'center',
+        backgroundColor:'#2bc2bc',
+  }
+})

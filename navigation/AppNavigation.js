@@ -8,7 +8,8 @@ import HomeScreen from '../screens/HomeScreen';
 import BannerDetail from '../screens/BannerDetail';
 import AnimalDetail from '../screens/AnimalDetail';
 import SearchScreen from '../screens/SearchScreen';
-
+import TabNavigator from '../navigation/TabsNavigation';
+import CartScreen from '../screens/CartScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,10 +19,11 @@ function AppStackNavigator() {
       <Stack.Screen name='WelcomeScreen' component={WelcomeScreen} />
       <Stack.Screen name='LoginScreen' component={LoginScreen} />
       <Stack.Screen name='RegisterScreen' component={RegisterScreen}/>
-      <Stack.Screen name='HomeScreen' component={HomeScreen} />
+      <Stack.Screen name='HomeScreen' component={TabNavigator} />
       <Stack.Screen name='BannerDetail' component={BannerDetail}/>
       <Stack.Screen name='AnimalDetail' component={AnimalDetail}/>
       <Stack.Screen name='SearchScreen' component={SearchScreen} />
+      <Stack.Screen name='CartScreen' component={CartScreen} />
     </Stack.Navigator>
   );
 }
