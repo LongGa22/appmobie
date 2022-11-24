@@ -13,7 +13,7 @@ function Banner_Item(props) {
   };
   return (
     <TouchableOpacity
-      style={{ ...styles.container, marginLeft: index == 0 ? 12 : 22 }}
+      style={{ ...styles.container, margin: index == 20 ? 0 : 12 }}
       onPress ={() => goToDetail()}
     >
       <Image style={styles.imageStyle} source={{ uri: item?.image }} />
@@ -29,26 +29,6 @@ function Banner_Item(props) {
           {item?.name}
         </Text>
         <View style={{ flexDirection: 'row' }}>
-          {/* <Text style={{ color: '#2FDBBC', fontWeight: 'bold', flex: 1 }}>
-            {item?.price} VND
-          </Text> */}
-          {/* <View
-            style={{
-              padding: 2,
-              backgroundColor: '#2FDBBC',
-              borderRadius: 8,
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              style={{
-                height: 20,
-                width: 20,
-                tintColor: '#fff',
-              }}
-              source={require('../assets/Basket.png')}
-            />
-          </View> */}
         </View>
       </View>
     </TouchableOpacity>
@@ -71,15 +51,14 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     flex: 1,
     marginBottom: 20,
-    shadowColor: '#000',
-    // shadowOffset: {
-    //   width: 0,
-    //   height: 4,
-    // },
-    // shadowOpacity: 0.3,
-    // shadowRadius: 4.65,
-
-    // elevation: 8,
+    shadowColor: '#7F5DF0',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.35,
+    shadowRadius: 3.5,
+    elevation: 5,
   },
   infoContainer: {
     paddingHorizontal: 12,

@@ -1,30 +1,66 @@
-import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Alert } from 'react-native'
 import Logo from '../assets/anh/nyanko-sensei2.png';
 import Logo2 from '../assets/anh/nyanko-sensei5.png';
 import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect } from 'react';
+import { View, Text, StyleSheet, Image, TextInput, TouchableOpacity, Alert } from 'react-native'
 
 export default function LoginScreen({navigation,props}){
-  const [name, setName] = useState('');
+  //const [name, setName] = useState('');
   const [email, setEmail]= useState('');
   const [password, setPassword]= useState('');
 
-  // const val = useContext(AuthContext);
-  const setData =async ()=> {
-    if (email.length ==0) {
-      Alert.alert('Nhập đủ email vào đi anh zai');
-    }
-    else{
-      try {
-          await AsyncStorage.setItem('Email',email);
-          navigation.navigate('HomeScreen');
-      } catch (error) {
-         console.log(error);
-      }
+  const goToHome = () => {
+    if (email.trim() == '' || !email) {
+      alert('Không được để trống email !');
+    } else if (password.trim() == '' || !password) {
+      alert('Không được để trống mật khẩu !');
+    } else {
+      login();
     }
   };
+  const login = async () => {
+    let userData = await AsyncStorage.getItem('userData');
+    if (userData) {
+      userData = JSON.parse(userData);
+      let arr = [...userData];
+      arr = arr.filter(
+        (value) =>
+          value.email.toLocaleLowerCase() == email.toLocaleLowerCase() &&
+          value.password == password
+      );
+      if (arr.length > 0) {
+        let curUser = arr[0];
+        AsyncStorage.setItem('curUser', JSON.stringify(curUser));
+        navigation.replace('HomeScreen');
+      } else alert('Email hoặc mật khẩu không chính xác!');
+    } else {
+      alert('Email hoặc mật khẩu không chính xác!');
+    }
+  };
+  // const goToSignUp = async () => {
+  //   navigation.navigate('SignUpScreen');
+  // };
+  const checkLogin = async () => {
+    let userData = await AsyncStorage.getItem('curUser');
+    if (userData) navigation.replace('HomeScreen');
+  };
+  useEffect(() => {
+    checkLogin();
+  }, []);
+  // const setData =async ()=> {
+  //   if (email.length ==0) {
+  //     Alert.alert('Nhập đủ email vào đi anh zai');
+  //   }
+  //   else{
+  //     try {
+  //         await AsyncStorage.setItem('Email',email);
+  //         navigation.navigate('HomeScreen');
+  //     } catch (error) {
+  //        console.log(error);
+  //     }
+  //   }
+  // };
     return(
         <View style={styles.container}>
           <View>
@@ -46,8 +82,8 @@ export default function LoginScreen({navigation,props}){
             onChangeText={(text)=>{setPassword(text)}}/>
 
             <TouchableOpacity style={styles.css_button}
-            // onPress={() =>navigation.navigate('HomeScreen')}
-            onPress={setData}
+             onPress={goToHome}
+            // onPress={setData}
             >
               <Text style={{fontWeight:'bold'}} >Đăng nhập</Text>
             </TouchableOpacity>

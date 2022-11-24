@@ -1,13 +1,6 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect } from "react";
-import {
-  View,
-  Text,
-  StatusBar,
-  FlatList,
-  Image,
-  TouchableOpacity,
-} from "react-native";
+import { View,Text,StatusBar,FlatList,Image,TouchableOpacity,StyleSheet } from "react-native";
 import { useIsFocused } from "@react-navigation/native";
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
@@ -47,7 +40,7 @@ export default function CartScreen() {
   return (
     <View
       style={{
-        paddingTop: StatusBar.currentHeight + 20,
+        paddingTop: StatusBar.currentHeight + 10,
         backgroundColor: "#fff",
         paddingHorizontal: 12,
         flex: 1,
@@ -79,7 +72,7 @@ export default function CartScreen() {
             color: "#2FDBBC",
           }}
         >
-           {getTotal()} VND
+           {getTotal()} USD
         </Text>
       </View>
       {cartList.length > 0 ? (
@@ -97,12 +90,29 @@ export default function CartScreen() {
           <Text style={{ color: "gray", fontSize: 20 }}>Giỏ hàng đang trống</Text>
         </View>
       )}
+      
+          <TouchableOpacity 
+            style={styles.css_button}
+            onPress={onFinish}>
+            <Text style={{fontWeight:'bold'}} >THANH TOÁN</Text>
+          </TouchableOpacity>
 
-      {/* <MainButton
-        onPress={onFinish}
-        style={{ marginVertical: 12 }}
-        title={"Thanh Toán"}
-      /> */}
+         
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  css_button:{
+    height:60,
+    width:280,
+    alignItems:'center',
+    justifyContent:'center',
+    borderRadius:20,
+    marginBottom:5,
+    marginTop:5,
+    alignSelf:'center',
+    backgroundColor:'#a3da27',
+    
+  }
+})

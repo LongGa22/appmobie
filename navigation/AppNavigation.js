@@ -10,7 +10,7 @@ import AnimalDetail from '../screens/AnimalDetail';
 import SearchScreen from '../screens/SearchScreen';
 import TabNavigator from '../navigation/TabsNavigation';
 import CartScreen from '../screens/CartScreen';
-
+//import LoadingScreen from '../screens/LoadingScreen';
 const Stack = createStackNavigator();
 
 function AppStackNavigator() {
@@ -24,6 +24,7 @@ function AppStackNavigator() {
       <Stack.Screen name='AnimalDetail' component={AnimalDetail}/>
       <Stack.Screen name='SearchScreen' component={SearchScreen} />
       <Stack.Screen name='CartScreen' component={CartScreen} />
+      {/* <Stack.Screen name='LoadingScreen' component={LoadingScreen} /> */}
     </Stack.Navigator>
   );
 }

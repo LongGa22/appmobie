@@ -44,124 +44,65 @@ export default function AnimalDetail({ navigation, route }) {
           style={{ width: "100%", height: 300 }}
           source={{ uri: item.image }}
         />
-        <TouchableOpacity
-          style={{
-            backgroundColor: "#ffffff60",
-            position: "absolute",
-            top: 30,
-            left: 12,
-            width: 40,
-            height: 40,
-            justifyContent: "center",
-            alignItems: "center",
-            borderRadius: 100,
-          }}
-        >
-          <Ionicons name="chevron-back-outline" size={30} color="white" />
-        </TouchableOpacity>
+
       </View>
       <View style={{ paddingHorizontal: 12, marginTop: 12 }}>
-        <Text style={{ fontSize: 25, fontWeight: "bold" }}>{item.name}</Text>
-        <Text style={{ color: "#F99928", fontSize: 16 }}>{item.owner}</Text>
+        <Text style={{ fontSize: 25, fontWeight: "bold" }}>{item.name}   <Text style={{ color: "green", fontSize: 26 ,fontWeight: "bold"}}>{item.status}</Text></Text>
+
         <Text
           style={{
             color: "#000",
-            fontSize: 12,
+            fontSize: 15,
             fontWeight: "bold",
-            marginTop: 24,
+            // marginTop: 24,
           }}
         >
           MÔ TẢ
         </Text>
         <Text
           style={{
-            color: "gray",
+            fontSize: 15,
+            color: "black",
           }}
         >
           {item.description}
         </Text>
         <View style={{ flexDirection: "row", marginTop: 20 }}>
           <View>
-            {/* <Text
+            <Text
               style={{
-                color: "#2FDBBC",
-                fontSize: 10,
+                color: "black",
+                fontSize: 15,
                 fontWeight: "bold",
-                marginLeft: 12,
               }}
-            >
-              SIZE
-            </Text> */}
-            {/* <View
+            >GIỚI TÍNH : 
+              {item.sex}
+            </Text>
+
+            <Text
               style={{
-                backgroundColor: "#f4f4f4",
-                borderRadius: 100,
-                paddingHorizontal: 8,
+                color: "black",
+                fontSize: 15,
+                fontWeight: "bold",
+                paddingTop:17,
               }}
-            >
-              <Picker
-                style={{ width: 140, height: 40 }}
-                selectedValue={size}
-                onValueChange={(itemValue, itemIndex) => setSize(itemValue)}
-              >
-                {item.size.map((value, index) => (
-                  <Picker.Item key={index} label={value} value={value} />
-                ))}
-              </Picker>
-            </View> */}
-            {/* <View
-              style={{
-                backgroundColor: "#F4F4F4",
-                paddingHorizontal: 16,
-                borderRadius: 100,
-                marginTop: 4,
-                width: 150,
-                paddingVertical: 8,
-                flexDirection: "row",
-              }}
-            >
-              <Text style={{ color: "#000", flex: 1 }}>{number}</Text>
-            </View> */}
+            > ĐỊA CHỈ : 
+              {item.location}
+            </Text>
+        
           </View>
           <View style={{ flex: 1 }} />
-          <View>
-            {/* <Text
-              style={{
-                color: "#2FDBBC",
-                fontSize: 10,
-                fontWeight: "bold",
-                marginLeft: 12,
-              }}
-            >
-              LƯỢNG ĐÁ
-            </Text> */}
-            {/* <View
-              style={{
-                backgroundColor: "#f4f4f4",
-                borderRadius: 100,
-                paddingHorizontal: 8,
-              }}
-            >
-              <Picker
-                style={{ width: 140, height: 40 }}
-                selectedValue={ice}
-                onValueChange={(itemValue, itemIndex) => setIce(itemValue)}
-              >
-                {item.ice.map((value, index) => (
-                  <Picker.Item key={index} label={value} value={value} />
-                ))}
-              </Picker>
-            </View> */}
-          </View>
+          {/* <View>
+          </View> */}
         </View>
         <View style={{ flexDirection: "row", marginTop: 20 }}>
           <View>
             <Text
               style={{
-                color: "#2FDBBC",
+                color: "black",
                 fontSize: 10,
                 fontWeight: "bold",
-                marginLeft: 12,
+                marginLeft: 35,
               }}
             >
               SỐ LƯỢNG
@@ -172,26 +113,28 @@ export default function AnimalDetail({ navigation, route }) {
                 paddingHorizontal: 16,
                 borderRadius: 100,
                 marginTop: 4,
-                width: 150,
+                width: 125,
                 paddingVertical: 8,
                 flexDirection: "row",
               }}
             >
-              <Text style={{ color: "#000", flex: 1 }}>{amount}</Text>
+                  <TouchableOpacity
+                onPress={() => {
+                  setAmount((val) => val + 1);
+                }}
+              >
+                <Ionicons name="add" size={24} color="black" />
+              </TouchableOpacity>
+              <Text style={{ color: "black", marginHorizontal:15,fontSize: 20, }}>{amount}</Text>
               <TouchableOpacity
                 onPress={() => {
                   if (amount > 1) setAmount((val) => val - 1);
                 }}
               >
-                <Ionicons name="remove" size={24} color="#2FDBBC" />
+                <Ionicons name="remove" size={24} color="black" />
               </TouchableOpacity>
-              <TouchableOpacity
-                onPress={() => {
-                  setAmount((val) => val + 1);
-                }}
-              >
-                <Ionicons name="add" size={24} color="#2FDBBC" />
-              </TouchableOpacity>
+              
+          
             </View>
           </View>
           <View style={{ flex: 1 }}>
@@ -201,32 +144,30 @@ export default function AnimalDetail({ navigation, route }) {
                 fontSize: 10,
                 textAlign: "right",
                 fontWeight: "bold",
+                marginRight: 50,
               }}
             >
               TỔNG
             </Text>
             <Text
               style={{
-                color: "#2FDBBC",
+                color: "black",
                 fontSize: 30,
                 textAlign: "right",
                 fontWeight: "bold",
+                paddingBottom:100,
               }}
             >
-              {item.price * amount} VND
+              {item.price * amount} USD
             </Text>
           </View>
         </View>
-        {/* <MainButton
-          onPress={addToCart}
-          style={{ marginTop: 30 }}
-          title={"THÊM VÀO GIỎ"}
-        /> */}
+  
           <TouchableOpacity 
-          style={styles.css_button}
+            style={styles.css_button}
             onPress={addToCart}>
-              <Text style={{fontWeight:'bold'}} >THÊM VÀO GIỎ</Text>
-            </TouchableOpacity>
+            <Text style={{fontWeight:'bold'}} >THÊM VÀO GIỎ</Text>
+          </TouchableOpacity>
       </View>
     </ScrollView>
   );
@@ -239,9 +180,9 @@ const styles = StyleSheet.create({
         backgroundColor:'white',
         alignItems:'center',
         justifyContent:'center',
-        borderRadius:10,
+        borderRadius:20,
         marginBottom:30,
         alignSelf:'center',
-        backgroundColor:'#2bc2bc',
+        backgroundColor:'#a2d926',
   }
 })

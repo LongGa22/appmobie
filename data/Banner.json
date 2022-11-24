@@ -30,6 +30,22 @@
         "price": 30000,
         "location": "Nhà Kiên moi",
         "description": "Tiffany Thành phần chất lượng cao Hoàn thiện & cân bằng dinh dưỡng (0,5kg, 1,5kg, 10kg.) ! "
-    }
+    },
+    {
+        "id": 4,
+        "name": "Nà Ní PetShop",
+        "image": "https://nanipetshop.com/wp-content/uploads/2021/08/BANNER_NANI_1187x498.png",
+        "price": 30000,
+        "location": "81 NB1, Tân Hưng Thuận, Quận 12, TP.HCM",
+        "description": "Nà Ní Pet Shop là shop online bán Đồ ăn & Đồ dùng cho thú cưng . Chúng tôi cung cấp trải nghiệm mua sắm vui vẻ, nhanh chóng và thân thiện với thiết bị di động, nhiều lựa chọn các sản phẩm chó & mèo chất lượng cao, bộ sưu tập độc đáo các sản phẩm thú cưng của Nà Ní (ví dụ: quần áo , đồ chơi) và dịch vụ khách hàng tuyệt vời."
+    },
+    {
+        "id": 5,
+        "name": "MEW PetShop",
+        "image": "https://mew.vn/wp-content/uploads/2022/07/banner-trang-chu-4-1024x576.jpg",
+        "price": 30000,
+        "location": "188/34 Tam Bình, Phường Tam Phú, TP. Thủ Đức",
+        "description": "MEW là địa chỉ uy tín cung cấp thú cưng và phụ kiện thú cưng nhập khẩu chất lượng tốt nhất từ 2012.Hy vọng MEW sẽ trở thành nơi đáng tin cậy để các Sen có thể mua sắm hằng ngày."
+    } 
    
 ]

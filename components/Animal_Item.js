@@ -12,7 +12,7 @@ function Animal_Item(props) {
   };
   return (
     <TouchableOpacity
-      style={{ ...styles.container, marginLeft: index == 0? 12 : 22 }}
+      style={{ ...styles.container, margin: index == 2? 8 : 14 }}
       onPress={goToDetail}
     >
       <Image style={styles.imageStyle} source={{ uri: item?.image }} />
@@ -28,13 +28,13 @@ function Animal_Item(props) {
           {item?.name}
         </Text>
         <View style={{ flexDirection: 'row' }}>
-          <Text style={{ color: '#2FDBBC', fontWeight: 'bold', flex: 1 }}>
+          <Text style={{ color: 'black', fontWeight: 'bold', flex: 1 }}>
             {item?.price} $
           </Text>
           <View
             style={{
               padding: 2,
-              backgroundColor: '#2FDBBC',
+              backgroundColor: '#85BB65',
               borderRadius: 8,
               alignItems: 'center',
             }}
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     marginLeft: 12,
     flex: 1,
     marginBottom: 20,
-    shadowColor: '#000',
+    shadowColor: '#7F5DF0',
     shadowOffset: {
       width: 0,
       height: 4,

@@ -6,6 +6,7 @@ import Bannerjson from "../data/Banner.json";
 import Animaljson from "../data/Animal.json";
 import Animal_Item from "../components/Animal_Item";
 import Banner_Item from "../components/Banner_Item";
+import axios from "axios";
 
 export default function HomeScreen({navigation}){
     const renderItem = ({ item, index }) => {
@@ -33,21 +34,30 @@ export default function HomeScreen({navigation}){
     useEffect(()=>{
         getData();
        },[]);
-
+    // var PET =[];
+    // axios({
+    //     method: 'GET',
+    //     url: 'https://6371b3300785877861807c29.mockapi.io/Pet/PET',
+    //     data: null
+    //   }).then(res =>{
+    //     console.log(res);
+    //     PET = res.data;
+    //   }).catch(err =>{
+    //     console.log(err);
+    //   });
+       
     return(
+       
         <ScrollView>
             <View style={StyleSheet.container}>
-            <View style={{backgroundColor:"grey",height:40,}}></View>
-            <Text style={{fontSize:20, alignSelf:'center', color:'green', paddingVertical:10}}>Welcome {email}</Text>
-            <TouchableOpacity style={styles.search}  onPress ={() => navigation.navigate('SearchScreen')}>
+            {/* <View style={{backgroundColor:"grey",height:40,}}></View> */}
+            <Text style={{fontSize:30, alignSelf:'center', color:'black', paddingVertical:5}}>MAKE A NEW FRIEND!</Text>
+            <TouchableOpacity style={styles.search}  onPress ={() => navigation.navigate('SearchScreen')} >
                 <Feather name="search" size={25} color="black" style={{marginTop:12}} />
                 <TextInput placeholder="Tìm Kiếm"></TextInput>
             </TouchableOpacity >
-            <View >
-              
-            </View >
-
-            <View style={{marginVertical:10}}>
+           
+            <View style={{marginVertical:5}}>
                 <FlatList
                 data={Bannerjson}
                 horizontal
@@ -56,7 +66,9 @@ export default function HomeScreen({navigation}){
                 renderItem={renderItem}
                 />
             </View>
-            <Text> On Selling</Text>
+           
+            <Text style={{marginStart:10, fontSize:20}}> Đề xuất cho bạn  <Text style={{ marginStart:10, fontSize:20}}> Đề xuất cho bạn</Text></Text>
+           
             <View >
                 <FlatList
                 data={Animaljson}
@@ -66,16 +78,17 @@ export default function HomeScreen({navigation}){
                 renderItem={renderItem2}
                 />
             </View>
+           
         </View>
-
-        </ScrollView>
-
+        </ScrollView> 
+      
+       
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor:'red',
+        backgroundColor:'#ffffff',
         flex:1,
         width:'100%',
         height:'100%',
@@ -95,7 +108,16 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         justifyContent:'center',
         alignSelf:'center',
-        backgroundColor:'pink',
+        backgroundColor:'#f6f6f6',
+        shadowColor: '#000',
+        shadowOffset: {
+          width: 0,
+          height: 4,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 4.65,
+    
+        elevation: 8,
     },
     text:{
         fontSize:25,

@@ -2,83 +2,122 @@
     {
         "id": 0,
         "name": "husky",
-        "image": "https://scontent.fhan7-1.fna.fbcdn.net/v/t1.6435-9/45882969_2141078852808437_4471822281038888960_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=sdJFzbmGpBMAX_j2Nsi&_nc_oc=AQn6Aonc3N3bBEh4_hXdIEpmuJzkdz3MSHz1gN8tabSmIIq83fvwsF66E2wjiLGblDc&_nc_ht=scontent.fhan7-1.fna&oh=00_AT_cUasoij340u_uPPMJNNF_icRWLjjOAOEz06rq6YC8OQ&oe=6376DE2C",
-        "status":"Sold Out",
-        "price": 40000,
-        "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "image": "https://www.scotsman.com/webimg/b25lY21zOjNjOGFjNmI2LTIwNDktNGYwMS1hYmMwLTk3YWM5MDBhMWIyZTpmMTBiMjFmMS1iZTk1LTRiNWQtODc2OS0yM2I1MzMzYzlhNTc=.jpg?quality=65&smart&width=990",
+        "status":"(on sale now !)",
+        "price": 1500,
+        "sex":"Male",
+        "location": "Cửa hàng chó cảnh Poodle, The Sparks Dương Nội, Khu ĐT Dương Nội 2 Hà Đông Hà Nội",
+        "description": "-Nguồn gốc: vùng Đông Bắc Siberia nước Nga  -Ngoại hình:Cao 53cm, nặng 27kg, có bộ lông rất dày màu xám-trắng, màu mắt: xanh nước biển.                                   -Tính cách chưa được thuần hoá hoàn toàn trong đời sống của con người: thích tự do, đào đất, nhảy cao, cắn đồ đạc. Giao tiếp với đồng loại bằng cách hú." 
+    
     },
     {
         "id": 1,
         "name": "Bull Pháp",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRELLBXW-t5N-AAPddVQi7Lbp_JQ8c5dBDOow&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
-        "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "status":"on sale",
+        "price":"1500",
+        "sex":"Male",
+        "location": "Cửa hàng chó cảnh Poodle,The Sparks Dương Nội, Khu ĐT Dương Nội 2 Hà Đông Hà Nội",
+        "description": "thân hình nhỏ gọn, cân đối, khá vạm vỡ ngoại trừ phần da nhăn nheo quanh mặt và vai. Những bé Bull Pháp thường có màu kem, nâu vàng, trắng, màu vện hay có chiếc mặt nạ màu đen, khá nghịch ngợm,  nuôi bé trong chung cư, phòng trọ thì bé cún khá phù hợp bởi vì không chỉ kích thước nhỏ mà chúng không sủa quá nhiều"
     },
     {
         "id": 2,
         "name": "bull terrier",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjXAF1VO3H7ldFXwOrQ0G6UIdJD0S1twLWhA&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
-        "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "status":"on sale",
+        "price": 2000,
+        "sex":"Male",
+        "location": "Dogily Petshop ,81-95 Nghi Tàm, P. Yên Phụ, Q. Tây Hồ, Tp Hà Nội.",
+        "description": "Bull Terrier Mini cao từ 10 – 14 inches (25 – 33 cm) và nặng: 24 – 33 pounds (11 – 15 kg).Bộ lông ngắn, dày với các màu trắng, đen, đỏ, nâu, đốm vằn vện. Đặc điểm nổi bật nhất ở loài Bull Terrier là cái đầu của nó, với cái trán phẳng lỳ từ trên đỉnh đầu xuống đến mũi"
     },
     {
         "id": 3,
         "name": "PUG",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtiGl2TfZLanhOAE66ONxL_MTRIp5mk6QtSA&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
+        "status":"on sale",
+        "price": 1800,
+        "sex":"Female",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "Nặng 6 - 8 kg, Cao 25 - 40 cm, Bộ lông Mềm, mịn, ngắn và bóng, Màu Trắng, Nâu vàng, đen,...Tuổi thọ 5-6 năm, rất thông minh và nhanh nhẹn, thậm chí có thể cảm nhận được thái độ của bạn thông qua giọng nói. Về cơ bản thì chúng rất hiền lành và hòa đồng nhưng thường ăn, ngủ, chơi nhiều "
     },
     {
         "id": 4,
         "name": "Mèo Anh lông ngắn",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTye5CjmaE-kG_1tbf5k0TsjsqTeR3b6NYNQQ&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
+        "status":"on sale",
+        "price": 485,
+        "sex":"Male",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "Màu lông của mèo Anh lông ngắn là khá đa dạng về sắc, trong đó màu xanh nước biển kiểu cổ điển vẫn là một màu khá phổ biến. Bộ lông ngắn nhưng rất dày, ít rụng lông nên việc chăm sóc không tốn nhiều thời gian. Bên cạnh đó, chú mèo có mặt tròn, má phệ, mũi ngắn và một cái đuôi to. Trọng lượng lý tưởng của mèo lông ngắn Anh là 4 kg–8.5 kg"
     },
     {
         "id": 5,
         "name": "Mèo Ba tư",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO40h7Zu94TfK-G2eBLGAJ3yohQLtpJiTk2w&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
+        "status":"on sale",
+        "price": 2000,
+        "sex":"Male",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "mèo Ba Tư nặng khoảng từ 3 đến 5kg với chiều cao từ 25 đến 38cm. Mèo Ba Tư có chiếc đầu lớn, tròn, hai bá mầu bĩnh, mũi của chúng khá ngắn và mõm sâu, tổng thể khuôn mặt phẳng. Cùng với đó là đôi tai nhỏ hình tam giác dựng đứng, đôi mắt to, có phần sắc sảo khiến mèo Ba Tư càng thêm phần kiêu sa hơn."
     },
     {
         "id": 6,
         "name": "Mèo Ai Cập Sphynx",
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK5He7YdjESktKhrfhxag2QKN91gXbdIceWQ&usqp=CAU",
-        "status":"Sold Out",
-        "price": 40000,
+        "status":"on sale",
+        "price": 3000,
+        "sex":"Female",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "Cơ thể mèo Ai Cập nhẵn nhụi không lông màu da tái nhợt, toàn thân được bao phủ bởi những nếp da nhăn nheo. Thực ra chúng vẫn có một lớp lông tơ mỏng bao trùm toàn cơ thể giúp cơ thể chúng nhạy bén hơn so với các giống mèo khác. Những chú mèo Sphynx có hai chiếc tai lớn,"
     },
     {
         "id": 7,
-        "name": "chó",
-        "image": "https://img.freepik.com/free-vector/cute-dog-sticking-her-tongue-out-cartoon-icon-illustration_138676-2709.jpg?w=2000",
-        "status":"Sold Out",
-        "price": 40000,
+        "name": "Hamster",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQN53U4dva69MDXMYtB-i2wMGf0y1h1kiCxWkqYle8DSPAyxr_rX2XZTZlWhDP_e_EGKSE&usqp=CAU",
+        "status":"on sale",
+        "price":50,
+        "sex":"Male",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "Chuột Hamster có thân hình khá nhỏ bé, nhỏ hơn rất nhiều so với dòng chuột cống, chuột chù…. trung bình 1 con trưởng thành nặng từ 300 – 500 gram.  Chuột Hamster là dòng chuột bị cận thị và bị mù màu. Chúng có bộ răng cửa rất dài và nhọn. Mắt tròn và hơi lồi, đặc biệt bộ phận giúp chúng đánh hơi tìm kiếm đồ ăn chính là chiếc mũi nhỏ màu hồng. Phần đuôi ngắn chỉ dài khoảng 1cm, phần lưng của chuột Hamster hơi cong. "
     },
     {
         "id": 8,
-        "name": "chó",
-        "image": "https://img.freepik.com/free-vector/cute-dog-sticking-her-tongue-out-cartoon-icon-illustration_138676-2709.jpg?w=2000",
-        "status":"Sold Out",
-        "price": 40000,
+        "name": "Thỏ Minilop",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ86X_ZzXASjOm_p7MGnlRNW4KZwEZb8xWgDQ&usqp=CAU",
+        "status":"on sale",
+        "price": 500,
+        "sex":"Male",
         "location": "235 Hoàng Quốc Việt",
-        "description": "ăn nhiều"
+        "description": "Thỏ minilop là một trong các dòng thỏ kiểng cao cấp nhất có nguồn gốc từ Hoa Kỳ. Là một dòng thỏ có kích thước nhỏ, đôi tai cụp nổi bật, lông mượt, rất được ưu chuộng và được chọn làm thú cưng. Thỏ minilop rất sạch sẽ, chúng đi vệ sinh ít hơn các dòng khác và cũng có ít mùi hơn. Thỏ minilop rất thông minh, nhanh nhẹn, bạn có thể huấn luyện chúng đi vệ sinh đúng chỗ, biết đón chủ về.Thỏ minilop đáng yêu, hội tụ được tất cả các đặc điểm tốt nhất của một bé thú cưng. "
+    },
+    {
+        "id": 9,
+        "name": "Vẹt trắng",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC89d3f0P0t2z20ZAN7-h0-QSdUzgdHlXM3A&usqp=CAU",
+        "status":"on sale",
+        "price": 750,
+        "sex":"Male",
+        "location": "235 Hoàng Quốc Việt",
+        "description": "Chiều cao trung bình của một con vẹt trắng ở độ tuổi trưởng thành là khoảng 40 – 50cm. Màu sắc trên bộ lông của chúng bao phủ là màu trắng, mào màu vàng. Dáng vẻ bên ngoài của chúng khá hút mắt, đặc biệt còn rất thân thiện. Do đó, giống vẹt này được nuôi ở nhà khá nhiều.  So với nhiều giống vẹt khác, vẹt trắng khá quấn chủ, chúng rất thích tương tác với chủ nhân của mình. Chiếc mào của vẹt thường dựng lên khi nó bị kích thích hoặc muốn bày tỏ cảm xúc nào đó. "
+    },
+    {
+        "id": 10,
+        "name": "Rùa kim cương",
+        "image": "https://i1-kinhdoanh.vnecdn.net/2019/05/06/rua-kimcuong-1557130847-155713-7818-9287-1557133562.png?w=680&h=0&q=100&dpr=1&fit=crop&s=OJlWR0QR8e4PjO2dKL1KrA",
+        "status":"on sale",
+        "price": 600,
+        "sex":"Male",
+        "location": "235 Hoàng Quốc Việt",
+        "description": "Diamondback Terrapin là một loài rùa nước lợ, sinh sống ở các khu vực ven biển nằm ở miền đông nam nước Mỹ. Chúng có kích thước trung bình dài khoảng 12 cm đối với con đực, con cái dài 25 cm. Tuổi thọ của rùa kim cương lên tới 20 năm. Loài này trong giới nuôi cảnh khá được chuộng, Rùa kim cương có nhiều màu sắc khác nhau như màu nâu, xám, xanh lục, màu đen. Trên các lớp da chúng sẽ được phủ thêm một lớp đốm đen hoặc xám, trắng. "
+    },
+    {
+        "id": 11,
+        "name": "Cá Koi",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP7qiodwNPhxXRhAlvXFEf1TCLFr7jCjSYlg&usqp=CAU",
+        "status":"on sale",
+        "price": 100,
+        "sex":"Male",
+        "location": "235 Hoàng Quốc Việt",
+        "description": "Cá Koi khi được sống trong hồ nước nhân tạo, điều kiện tốt sẽ có thể sống tới 25 -35 năm. Nói về cá Koi thì người Trung Quốc còn có cả câu chuyện truyền thuyết về giống cá này, được mệnh danh là “cá chép hóa rồng”, “cá vượt vũ môn” – là loài cá có sức sống mạnh mẽ, thần kỳ với khả năng bơi ngược dòng. Theo truyền thuyết loài cá này khi sống tới 100 năm thì sẽ hóa rồng, thể hiện triết lý, ước mơ vươn lên của muôn loài trong vũ trụ."
     }
-   
 ]

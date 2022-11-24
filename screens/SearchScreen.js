@@ -4,6 +4,8 @@ import {View,Text,StatusBar,TouchableOpacity,FlatList} from "react-native";
 import SearchToDetail from "../components/SearchToDetail";
 import MainInput from "../components/MainInput";
 import AnimalData from "../data/Animal.json";
+import Bannerjson from "../data/Banner.json";
+import Banner_Item from "../components/Banner_Item";
 export default function SearchScreen({ navigation }) {
   const [textSearch, settextSearch] = useState("");
   const categories = [
@@ -13,6 +15,9 @@ export default function SearchScreen({ navigation }) {
     "bull terrier",
     "husky",
   ];
+  const renderItem3 = ({ item, index }) => {
+    return <Banner_Item item={item} index={index} navigation={navigation} />;
+  };
   const renderResult = () => {
     const data = AnimalData.filter((value) =>
       value.name.toLocaleLowerCase().includes(textSearch.toLocaleLowerCase())
@@ -36,7 +41,7 @@ export default function SearchScreen({ navigation }) {
   return (
     <View
       style={{
-        backgroundColor: "#fff",
+        backgroundColor: "white",
         flex: 1,
         paddingTop: StatusBar.currentHeight + 20,
         paddingHorizontal: 12,
@@ -47,7 +52,7 @@ export default function SearchScreen({ navigation }) {
         onChangeText={settextSearch}
         placeholder={"Nhập để tìm kiếm..."}
         title={"TÌM KIẾM"}
-        style={{}}
+       
       />
       {textSearch.trim().length > 0 ? (
         renderResult()
@@ -78,6 +83,17 @@ export default function SearchScreen({ navigation }) {
           </View>
         </>
       )}
+        <Text style={{ fontSize: 15, fontWeight: "bold", marginBottom: 5 }}>Special Offer</Text>
+          <View style={{marginVertical:5}}>
+              <FlatList
+              data={Bannerjson}
+              numColumns ={3}
+              // showsHorizontalScollIndicator={true}
+              keyExtractor={(item, index) => item + index}
+              renderItem={renderItem3}
+              />
+          </View>
     </View>
+    
   );
 }
