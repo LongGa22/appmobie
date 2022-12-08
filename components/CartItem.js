@@ -67,7 +67,7 @@ export default function CartItem(props) {
         </View>
         <View style={{ flexDirection: "row" }}>
           <View style={{ flex: 1 }}>
-            <Text style={{ fontSize: 11 }}>Price: {item.price} VND</Text>
+            <Text style={{ fontSize: 11 }}>Price: {item.price} USD</Text>
             {/* <Text style={{ fontSize: 11 }}>Size: {item.size}</Text>
             <Text style={{ fontSize: 11 }}>Ice: {item.ice}</Text> */}
           </View>

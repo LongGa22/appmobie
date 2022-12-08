@@ -88,11 +88,14 @@ export default function LoginScreen({navigation,props}){
               <Text style={{fontWeight:'bold'}} >Đăng nhập</Text>
             </TouchableOpacity>
 
-            <Text style={{alignSelf:'center', fontWeight:'500'}}>Bạn chưa gia nhập với chúng tôi ư, 
+            <View style={{alignItems:'center',justifyContent:'center',flexDirection:'row'}}>
+            <Text style={{ fontWeight:'500'}}>Bạn chưa gia nhập với chúng tôi ư,</Text>
               <TouchableOpacity  onPress ={() => navigation.navigate('RegisterScreen')}>
-                <Text style={{color:'red'}}> Đăng ký</Text>
+                <Text style={{color:'red', fontWeight:'500'}}> Đăng ký</Text>
               </TouchableOpacity>
-            </Text>
+            
+            </View>
+           
           </View>
           <View>
             <Image source={Logo2} style={{height:300, width:400,marginTop:-20}}/>

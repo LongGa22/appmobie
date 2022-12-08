@@ -33,13 +33,13 @@ function SearchToDetail(props) {
           {item?.owner}
         </Text>
         <View style={{ flexDirection: "row" }}>
-          <Text style={{ color: "#2FDBBC", fontWeight: "bold", width:100 }}>
-            {item?.price} VND
+          <Text style={{ color: "black", fontWeight: "bold", width:100 }}>
+            {item?.price} USD
           </Text>
           <View
             style={{
               padding: 2,
-              backgroundColor: "#2FDBBC",
+              backgroundColor: "#85BB65",
               borderRadius: 8,
               alignItems: "center",
             }}

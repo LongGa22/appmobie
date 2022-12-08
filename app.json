@@ -4,10 +4,10 @@
     "slug": "MyPetStore",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon-MyPetStore.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash-MyPetStore.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,13 +21,21 @@
       "supportsTablet": true
     },
     "android": {
+      "package":"com.long2k2.MyPetStore",
+      "versionCode":1,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/icon256.png",
         "backgroundColor": "#FFFFFF"
       }
+
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "baf102ab-8c0c-4346-b691-d784d1402d07"
+      }
     }
   }
 }

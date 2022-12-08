@@ -9,55 +9,53 @@ import Banner_Item from "../components/Banner_Item";
 import axios from "axios";
 
 export default function HomeScreen({navigation}){
-    const renderItem = ({ item, index }) => {
+    const renderbanner = ({ item, index }) => {
         return <Banner_Item item={item} index={index} navigation={navigation} />;
       };
 
-    const renderItem2 = ({ item, index }) => {
+    const renderanimal = ({ item, index }) => {
        return <Animal_Item item={item} index={index} navigation={navigation} />;
      };
-    const [name,setName] = useState('');
-    const [email,setEmail] = useState('');
-    const [password,setPassword]=useState('')
-    const getData =() =>{
-        try {
-            AsyncStorage.getItem('Email')
-            .then(value=>{
-                if(value != null){
-                    setEmail(value);
-                }
-            })
-        } catch (error) {
+     
+    const [pet,setPet] = useState([]);
+    const [banner,setBanner] = useState([]);
+
+    const getPet =async ()=>{
+        await axios.get('https://6371b3300785877861807c29.mockapi.io/Pet/PET')
+        .then((respone)=>{
+            setPet(respone?.data)
+        })
+        .catch((error)=>{
             console.log(error);
-        }
+        })
     }
+
+    const getBanner =async ()=>{
+        await axios.get('https://6371b3300785877861807c29.mockapi.io/Pet/Banner')
+        .then((respone)=>{
+            setBanner(respone?.data)
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+    }
+
     useEffect(()=>{
-        getData();
+        getPet();
+        getBanner();
        },[]);
-    // var PET =[];
-    // axios({
-    //     method: 'GET',
-    //     url: 'https://6371b3300785877861807c29.mockapi.io/Pet/PET',
-    //     data: null
-    //   }).then(res =>{
-    //     console.log(res);
-    //     PET = res.data;
-    //   }).catch(err =>{
-    //     console.log(err);
-    //   });
-       
     return(
-       
+
         <ScrollView>
             <View style={StyleSheet.container}>
-            {/* <View style={{backgroundColor:"grey",height:40,}}></View> */}
+            <View style={{backgroundColor:"grey",height:40,}}></View>
             <Text style={{fontSize:30, alignSelf:'center', color:'black', paddingVertical:5}}>MAKE A NEW FRIEND!</Text>
             <TouchableOpacity style={styles.search}  onPress ={() => navigation.navigate('SearchScreen')} >
                 <Feather name="search" size={25} color="black" style={{marginTop:12}} />
                 <TextInput placeholder="Tìm Kiếm"></TextInput>
             </TouchableOpacity >
-           
-            <View style={{marginVertical:5}}>
+           {/* <Text>aaaaaaaaas{product.description}$</Text> */}
+            {/* <View style={{marginVertical:5}}>
                 <FlatList
                 data={Bannerjson}
                 horizontal
@@ -65,24 +63,31 @@ export default function HomeScreen({navigation}){
                 keyExtractor={(item, index) => item + index}
                 renderItem={renderItem}
                 />
-            </View>
-           
-            <Text style={{marginStart:10, fontSize:20}}> Đề xuất cho bạn  <Text style={{ marginStart:10, fontSize:20}}> Đề xuất cho bạn</Text></Text>
-           
-            <View >
-                <FlatList
-                data={Animaljson}
-                numColumns ={2}
+            </View> */}
+            <View>
+            <FlatList
+                data={banner}
+                horizontal
                 showsHorizontalScrollIndicator={true}
                 keyExtractor={(item, index) => item + index}
-                renderItem={renderItem2}
+                renderItem={renderbanner}
                 />
             </View>
            
+            <Text style={{marginStart:10, fontSize:20}}> Đề xuất cho bạn </Text>
+           
+            <View >
+                <FlatList
+                data={pet}
+                numColumns ={2}
+                // horizontal
+                showsHorizontalScrollIndicator={true}
+                keyExtractor={(item, index) => item + index}
+                renderItem={renderanimal}
+                />
+            </View>
         </View>
         </ScrollView> 
-      
-       
     );
 }
 

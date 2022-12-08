@@ -29,7 +29,9 @@ export default function ProfileScreen({ navigation }) {
   }
 
   return (
+ 
     <View
+    
       style={{
         backgroundColor: "#f8f8fe",
         flex: 1,
@@ -37,6 +39,7 @@ export default function ProfileScreen({ navigation }) {
         paddingHorizontal: 12,
       }}>
       {/* <View style={{ flex: 1, alignItems: "center" }}> */}
+      <View style={{backgroundColor:"#f8f8fe",height:40,}}></View>
       <View style={{ flex: 1,}}>
         <View style={{flexDirection:"row"}}>
           <Image
@@ -45,9 +48,9 @@ export default function ProfileScreen({ navigation }) {
               width: 120,
               borderRadius: 100,
             }}
-          source={{ uri: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" }}
+          // source={{ uri: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200" }}
           // source={{ uri: "https://robohash.org/e03fa67265271f37e4c033d47499d580?set=set4&bgset=&size=400x400" }}
-          //  source={{ uri: "https://robohash.org/8e0a1f5380ed53ca7fc8d2b492dfb637?set=set4&bgset=&size=400x400" }}
+           source={{ uri: "https://robohash.org/8e0a1f5380ed53ca7fc8d2b492dfb637?set=set4&bgset=&size=400x400" }}
           //  source={{ uri: "https://robohash.org/2f08b070a0d62dd6b3a8e343107373de?set=set4&bgset=&size=400x400" }}
           />
           <View style={{
@@ -80,7 +83,7 @@ export default function ProfileScreen({ navigation }) {
               justifyContent:'center',
               borderRadius:25,
               backgroundColor:'#71beca', 
-            }}onPress={logOut}>
+            }}>
             <Text style={{color:'white'}}> Edit Profile</Text>
         </TouchableOpacity>
 
@@ -97,24 +100,26 @@ export default function ProfileScreen({ navigation }) {
             style={{
               height:'85%',
               width:'89%',
-              backgroundColor:'white',
+              backgroundColor:'#fff',
               margin:20,
               }}>
                  <Ionicons  name="options-outline" size={24} color="black"><Text> Options</Text></Ionicons> 
-                <View style={{flexDirection:"row"}}>
-                  <Text style={{ paddingVertical:10,}}  >Notifications: {switchValue ? 'ON ': 'OFF'}   </Text> 
-                  <Switch onValueChange={toggleSwitch}value={switchValue} style={{paddingLeft:145,}}/>
-                </View>
+                 <View style={{ borderBottomWidth:0.5, flexDirection:"row"}}>
+                    <View style={{width:'70%',flexDirection:'column'}}>
+                      <Text style={{ paddingVertical:10,}}  >Notifications: {switchValue ? 'ON ': 'OFF'}   </Text> 
+                      <Text style={{ paddingVertical:20,}}  >Online reminder: {switchValue ? 'ON ': 'OFF'}   </Text> 
+                      <Text style={{ paddingVertical:10, }}  >Theme Mode: {switchValue ? 'Light Mode': 'Dark Mode'} </Text>
+                    </View>
+        
+                  <View style={{flexDirection:"column",width:'30%',alignItems:'center',justifyContent:'center' }}>
+                    <Switch onValueChange={toggleSwitch}value={switchValue} />
+                    <Switch onValueChange={toggleSwitch}value={switchValue} />
+                    <Switch onValueChange={toggleSwitch}value={switchValue} />
+                  </View>
 
-                <View style={{flexDirection:"row"}}>
-                  <Text style={{ paddingVertical:10,}}  >Online reminder: {switchValue ? 'ON ': 'OFF'}   </Text> 
-                  <Switch onValueChange={toggleSwitch}value={switchValue} style={{paddingLeft:125,}}/>
-                </View>
+                  </View>
 
-                <View style={{flexDirection:"row", borderBottomWidth:0.5}}>
-                  <Text style={{ paddingVertical:10, }}  >Theme Mode: {switchValue ? 'Light Mode': 'Dark Mode'} </Text>
-                  <Switch onValueChange={toggleSwitch}value={switchValue} style={{paddingLeft:103,}}/>
-                </View>
+              
 
                 <MaterialIcons name="account-circle" size={24} color="black" style={{ paddingVertical:10, }} > </MaterialIcons>
                 <View style={{flexDirection:"row"}}>

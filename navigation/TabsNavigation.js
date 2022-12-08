@@ -27,9 +27,9 @@ const TabNavigator= () =>{
             
         }}
         screenOptions={{
-            headerShown:true,
+            headerShown:false,
             tabBarShowLabel:true,
-            tabBarStyle:{backgroundColor:'white'},
+            tabBarStyle:{backgroundColor:'#fff'},
             tabBarInactiveTintColor:'#878b9e',
             tabBarActiveTintColor:'#efd7c2',
             // tabBarLabelPosition:'below-icon',
@@ -43,7 +43,7 @@ const TabNavigator= () =>{
             )
         }}/>
         <Tab.Screen name="Cart" component={CartScreen} options={{
-            // tabBarBadge:3,
+            tabBarBadge:3,
             tabBarIcon:({color,size}) =>(
                 <Feather name="shopping-cart" size={size} color={color} />
             )
